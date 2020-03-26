@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Slutprojekt
 {
-    class Arpeggiator
+    class Arpeggiator : Sound
     {
        List<string> noteList = new List<string>();
 
@@ -15,7 +15,7 @@ namespace Slutprojekt
 
         
         Console.WriteLine("How many notes?");
-            int notenumber;
+        int notenumber;
 
         int.TryParse(Console.ReadLine(), out notenumber);
 
@@ -23,7 +23,7 @@ namespace Slutprojekt
             {
                 Console.WriteLine("Note number: " + i);
                 string input = Console.ReadLine();
-        noteList.Add(input.ToUpper());
+                noteList.Add(input.ToUpper());
             }
 
 
