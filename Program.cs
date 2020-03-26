@@ -16,7 +16,7 @@ namespace Slutprojekt
 
             while (true)
             {
-                Console.WriteLine("Press 1 to use normal synth or 2 to use arpeggiator.");
+                Console.WriteLine("Press 1 to use normal synth or 2 to use arpeggiator.\nPress 'Q' to quit the current selection.");
                 input = Utils.Choice(1, 2);
 
                 if (input == 1)
@@ -32,7 +32,7 @@ namespace Slutprojekt
             
             
 
-            Console.ReadKey();
+            // Console.ReadKey();
         }
     }
 }

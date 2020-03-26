@@ -8,6 +8,6 @@ namespace Slutprojekt
 {
     class Sound
     {
-
+        protected bool check = true;
     }
 }

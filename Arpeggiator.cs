@@ -24,13 +24,16 @@ namespace Slutprojekt
                 Console.WriteLine("Note number: " + i);
                 string input = Console.ReadLine();
                 noteList.Add(input.ToUpper());
+                
             }
 
 
-            while (true)
+            while (check == true)
             {
                 for (int i = 0; i<notenumber; i++)
                 {
+
+
                     if (noteList[i] == "A")
                     {
                         new A_note();
@@ -65,6 +68,14 @@ namespace Slutprojekt
                     {
                         new G_note();
                     }
+
+
+
+                    if (Console.KeyAvailable)
+                        if (Console.ReadKey(true).Key == ConsoleKey.Q)
+                        {
+                            check = false;
+                        }
 
 
                 }

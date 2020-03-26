@@ -11,8 +11,8 @@ namespace Slutprojekt
 
         public Synth()
         {
-            bool check = true;
-            Console.WriteLine("Press any of the following keys to play a note: C-D-E-F-G-A-B\nPress 'Q' to exit.");
+            
+            Console.WriteLine("Press any of the following keys to play a note: C-D-E-F-G-A-B");
 
             while (check == true)
             {
