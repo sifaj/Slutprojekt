@@ -32,8 +32,6 @@ namespace Slutprojekt
             {
                 for (int i = 0; i<notenumber; i++)
                 {
-
-
                     if (noteList[i] == "A")
                     {
                         new A_note();
