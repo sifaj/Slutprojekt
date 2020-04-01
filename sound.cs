@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Slutprojekt
 {
-    class Sound
+    class Sound : Utils
     {
         protected bool check = true;
     }
