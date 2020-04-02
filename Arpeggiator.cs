@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Slutprojekt
 {
     class Arpeggiator : Sound
     {
-       List<string> noteList = new List<string>();
+        int monkey = 0;
+
+       List<string> noteList = new List<string>(); // Listan där valda noter lagras
 
         public Arpeggiator()
         {
@@ -37,54 +40,71 @@ namespace Slutprojekt
 
             while (check == true) // Medans check är true kommer nedanstående loop köras om och om igen.
             {
-                for (int i = 0; i<notenumber; i++) // Skapar en ny note-objekt, och tonen beror på vilken not som ligger i korresponderande plats i listan.
+                if (monkey == 1)
                 {
-                    if (noteList[i] == "A")
+                    for (int i = 0; i < notenumber; i++) // Skapar en ny note-objekt, och tonen beror på vilken not som ligger i korresponderande plats i listan.
                     {
-                        new A_note();
-}
+                        if (noteList[i] == "A")
+                        {
+                            new A_note();
+                        }
 
-                    if (noteList[i] == "B")
-                    {
-                        new B_note();
+                        if (noteList[i] == "B")
+                        {
+                            new B_note();
+                        }
+
+                        if (noteList[i] == "C")
+                        {
+                            new C_note();
+                        }
+
+                        if (noteList[i] == "D")
+                        {
+                            new D_note();
+                        }
+
+                        if (noteList[i] == "E")
+                        {
+                            new E_note();
+                        }
+
+                        if (noteList[i] == "F")
+                        {
+                            new F_note();
+                        }
+
+                        if (noteList[i] == "G")
+                        {
+                            new G_note();
+                        }
+
+                        if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 
+                            if (Console.ReadKey(true).Key == ConsoleKey.Q)
+                            {
+
+                                Console.Clear();
+                                check = false;
+
+                            }
+
+
                     }
-
-                    if (noteList[i] == "C")
-                    {
-                        new C_note();
-                    }
-
-                    if (noteList[i] == "D")
-                    {
-                        new D_note();
-                    }
-
-                    if (noteList[i] == "E")
-                    {
-                        new E_note();
-                    }
-
-                    if (noteList[i] == "F")
-                    {
-                        new F_note();
-                    }
-
-                    if (noteList[i] == "G")
-                    {
-                        new G_note();
-                    }
-
+                }
+                else if (monkey == 0)
+                {
+                    noteList.Add(File.ReadAllLines(@"C:\Users\alvin.hagerback\Documents\Amnen\Programmering 2\notes.txt"));
                     if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 
                         if (Console.ReadKey(true).Key == ConsoleKey.Q)
                         {
 
                             Console.Clear();
                             check = false;
-                            
+
                         }
 
-
                 }
+               
 
             }
 
