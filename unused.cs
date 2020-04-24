@@ -67,5 +67,20 @@ namespace Slutprojekt
 
             }
             */
+
+        /*else if (monkey == 0)
+               {
+                   noteList.Add(File.ReadAllLines(@"C:\Users\alvin.hagerback\Documents\Amnen\Programmering 2\notes.txt"));
+                   if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 
+                       if (Console.ReadKey(true).Key == ConsoleKey.Q)
+                       {
+
+                           Console.Clear();
+                           check = false;
+
+                       }
+
+               }
+               */
     }
 }

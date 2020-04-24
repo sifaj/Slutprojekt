@@ -9,7 +9,7 @@ namespace Slutprojekt
 {
     class Arpeggiator : Sound
     {
-        int monkey = 0;
+        // int monkey = 0;
 
        List<string> noteList = new List<string>(); // Listan där valda noter lagras
 
@@ -40,8 +40,7 @@ namespace Slutprojekt
 
             while (check == true) // Medans check är true kommer nedanstående loop köras om och om igen.
             {
-                if (monkey == 1)
-                {
+
                     for (int i = 0; i < notenumber; i++) // Skapar en ny note-objekt, och tonen beror på vilken not som ligger i korresponderande plats i listan.
                     {
                         if (noteList[i] == "A")
@@ -91,19 +90,7 @@ namespace Slutprojekt
 
                     }
                 }
-                else if (monkey == 0)
-                {
-                    noteList.Add(File.ReadAllLines(@"C:\Users\alvin.hagerback\Documents\Amnen\Programmering 2\notes.txt"));
-                    if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 
-                        if (Console.ReadKey(true).Key == ConsoleKey.Q)
-                        {
-
-                            Console.Clear();
-                            check = false;
-
-                        }
-
-                }
+               
                
 
             }
@@ -112,4 +99,3 @@ namespace Slutprojekt
     }
 
     }
-}
