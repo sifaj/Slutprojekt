@@ -10,7 +10,7 @@ namespace Slutprojekt
     {
 
 
-        public C_note()
+        public override void Play()
         {
             Beep(262);
         }

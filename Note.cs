@@ -10,9 +10,14 @@ namespace Slutprojekt
     {
 
 
-        public void Beep (int freqeuency)
+        public virtual void Beep (int freqeuency)
         {
             Console.Beep(freqeuency, 300);
+        }
+
+        public virtual void Play()
+        {
+
         }
     }
 }

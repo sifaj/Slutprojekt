@@ -10,12 +10,26 @@ namespace Slutprojekt
     class Arpeggiator : Sound
     {
         // int monkey = 0;
+        Note A = new A_note();
+        Note B = new B_note();
+        Note C = new C_note();
+        Note D = new D_note();
+        Note E = new E_note();
+        Note F = new F_note();
+        Note G = new G_note();
 
-       List<string> noteList = new List<string>(); // Listan där valda noter lagras
+
+        List<string> noteList = new List<string>(); // Listan där valda noter lagras
+        List<Note> playList = new List<Note>(); 
+
+        
+
+        
+       
 
         public Arpeggiator()
         {
-
+            
         
         Console.WriteLine("How many notes?");
         int notenumber;
@@ -25,7 +39,7 @@ namespace Slutprojekt
             {
                 
                 Console.WriteLine("You entered an invalid number"); // Tvingar spelaren att skriva en siffra.
-                Console.Write("enter number of conversations ");
+                Console.Write("enter number of notes ");
 
             }
 
@@ -45,37 +59,37 @@ namespace Slutprojekt
                     {
                         if (noteList[i] == "A")
                         {
-                            new A_note();
+                        A.Play();
                         }
 
                         if (noteList[i] == "B")
                         {
-                            new B_note();
+                        B.Play();
                         }
 
                         if (noteList[i] == "C")
                         {
-                            new C_note();
+                        C.Play();
                         }
 
                         if (noteList[i] == "D")
                         {
-                            new D_note();
+                        D.Play();
                         }
 
                         if (noteList[i] == "E")
                         {
-                            new E_note();
+                        E.Play();
                         }
 
                         if (noteList[i] == "F")
                         {
-                            new F_note();
+                        F.Play();
                         }
 
                         if (noteList[i] == "G")
                         {
-                            new G_note();
+                        G.Play();
                         }
 
                         if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 
