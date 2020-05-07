@@ -9,7 +9,7 @@ namespace Slutprojekt
     class Synth : Sound
     {
 
-        public Synth()
+        public void PlaySynth()
         {
             
             Console.WriteLine("Press any of the following keys to play a note: C-D-E-F-G-A-B");
@@ -19,43 +19,43 @@ namespace Slutprojekt
                 if (Console.KeyAvailable) // Ett exempel på ovanstående kommentar, där if satserna kollar ifall spelaren trycker på följande knapp, vilket isåfall skapar korrespånderande not-klass.
                     if (Console.ReadKey(true).Key == ConsoleKey.A)
                     {
-                        new A_note();
+                        noteDict["A"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.B)
                     {
-                        new B_note();
+                        noteDict["B"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.C)
                     {
-                        new C_note();
+                        noteDict["C"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.D)
                     {
-                        new D_note();
+                        noteDict["D"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.E)
                     {
-                        new E_note();
+                        noteDict["E"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.F)
                     {
-                        new F_note();
+                        noteDict["F"].Play();
                     }
 
                 if (Console.KeyAvailable)
                     if (Console.ReadKey(true).Key == ConsoleKey.G)
                     {
-                        new G_note();
+                        noteDict["G"].Play();
                     }
 
                 if (Console.KeyAvailable) // Ifall spelaren trycker på Q clearas skärmen och loopen slutar köras. 

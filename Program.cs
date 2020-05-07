@@ -13,7 +13,9 @@ namespace Slutprojekt
         static void Main(string[] args)
         {
             int input = 0;
-                 
+            Arpeggiator A = new Arpeggiator();
+            Synth S = new Synth();
+            new Sound();
 
             while (true)
             {
@@ -22,18 +24,15 @@ namespace Slutprojekt
 
                 if (input == 1)
             {
-                new Synth();
+                    S.PlaySynth();
             }
 
             if (input == 2)
             {
-                new Arpeggiator();
+                    A.PlayArpeggiator();
             }
-            }
+        }            
             
-            
-
-            // Console.ReadKey();
         }
     }
 }
